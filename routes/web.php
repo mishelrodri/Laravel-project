@@ -15,9 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // RUTAS DE RECURSOS, es importante el orden de las rutas ya que podrian ser enclipsadas
 
-Route::get('/', function () {
-	return view('welcome');
-})->name('main');
+Route::get('/', 'MainController@index')->name('main');
 
 Route::get('products', 'ProductsController@index')->name('products.index');
 
@@ -33,3 +31,8 @@ Route::get('products/{product}/edit', 'ProductsController@edit')->name('products
 Route::match(['put', 'patch'], 'products/{product}', 'ProductsController@update')->name('products.update');
 
 Route::delete('products/{product}', 'ProductsController@destroy')->name('products.destroy');
+
+// ESTO ES LA PRUEBA DEL SEGUNDO QUIZ XD
+// Route::get('{value}', function ($value) {
+// 	return $value;
+// });

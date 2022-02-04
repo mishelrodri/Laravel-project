@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 class ProductsController extends Controller {
+
 	public function index() {
-		return 'This is the list of products from CONTROLLER';
+		return view('Products.index');
 	}
 
 	public function create() {
@@ -14,7 +15,7 @@ class ProductsController extends Controller {
 		//
 	}
 	public function show($product) {
-		return "Showing the product with id {$product} from CONTROLLER";
+		return view('Products.show');
 	}
 	public function edit($product) {
 		return "Showing the form to edit the product with id {$product} FROM CONTROLLER";
